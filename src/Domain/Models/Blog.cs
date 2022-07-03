@@ -1,4 +1,6 @@
-﻿namespace Domain.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Domain.Models;
 
 public class Blog : ModelBase
 {
@@ -6,9 +8,6 @@ public class Blog : ModelBase
 
     public string Text { get; init; }
 
-    public long AuthorId { get; set; }
-
-    public int Likes { get; set; }
-
-    public Author Author { get; set; }
+    [Timestamp]
+    public byte[] RowVersion { get; set; }
 }
