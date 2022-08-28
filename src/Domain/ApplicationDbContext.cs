@@ -13,8 +13,8 @@ public class ApplicationDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Blog>()
-            .Property(x => x.RowVersion)
-            .IsRowVersion();
+            .HasIndex(x => x.Title);
+
     }
 
     public DbSet<Blog> Blogs { get; set; }

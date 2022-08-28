@@ -13,7 +13,7 @@ var randomBlogs = await dbContext.Blogs
     .ToListAsync();
 
 
-var groupByNothing = await dbContext.Blogs
-    .GroupBy(_ => 1)
-    .Select(x => new { SumLikes = x.Sum(s => s.Likes) })
-    .FirstOrDefaultAsync();
+//var groupByNothing = await dbContext.Blogs
+//    .GroupBy(_ => 1)
+//    .Select(x => new { SumLikes = x.Sum(s => s.Likes) })
+//    .FirstOrDefaultAsync();
