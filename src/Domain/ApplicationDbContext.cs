@@ -13,8 +13,8 @@ public class ApplicationDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Blog>()
-            .HasIndex(x => x.Title);
-
+            .HasIndex(x => new { x.Title, x.Url })
+            .IsDescending(true, false);
     }
 
     public DbSet<Blog> Blogs { get; set; }

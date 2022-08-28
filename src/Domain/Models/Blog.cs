@@ -8,6 +8,8 @@ public class Blog : ModelBase
 
     public string Text { get; init; }
 
+    public string Url { get; set; }
+
     [Timestamp]
     public byte[] RowVersion { get; set; }
 }
