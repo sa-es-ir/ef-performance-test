@@ -2,8 +2,20 @@
 
 using Domain;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 Console.WriteLine("Hello, World!");
+
+var services = new ServiceCollection();
+
+services.AddDbContext<ApplicationDbContext>(options =>
+{
+    options.UseSqlServer("");
+});
+
+
+var app = services.BuildServiceProvider();
+
 
 var dbContext = new ApplicationDbContext(new DbContextOptions<ApplicationDbContext>());
 
