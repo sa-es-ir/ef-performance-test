@@ -991,3 +991,4 @@ csv-files/
 
 #ingore generated vs code
 .vscode/
+.vs/
