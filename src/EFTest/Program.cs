@@ -1,10 +1,15 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using System.Diagnostics;
+using BenchmarkDotNet.Running;
 using Domain;
 using Domain.Models;
+using EFTest;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+
+Console.WriteLine(BenchmarkRunner.Run<EFSaveChangeBechmark>());
+return;
 
 Console.WriteLine("Hello, World!");
 
