@@ -8,7 +8,7 @@ using EFTest;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-Console.WriteLine(BenchmarkRunner.Run<EFSaveChangeBechmark>());
+Console.WriteLine(BenchmarkRunner.Run<LinqAggregateBenchmark>());
 return;
 
 Console.WriteLine("Hello, World!");
