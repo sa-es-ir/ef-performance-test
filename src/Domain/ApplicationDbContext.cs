@@ -12,14 +12,15 @@ public class ApplicationDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseInMemoryDatabase("TestDb");
+        optionsBuilder.UseSqlServer(
+            "Server=(localdb)\\mssqllocaldb;Database=TestEF;Integrated Security=true;MultipleActiveResultSets=true");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Blog>()
-            .HasIndex(x => new { x.Title, x.Url })
-            .IsDescending(true, false);//<-- EF 7.0 new feature
+        //modelBuilder.Entity<Blog>()
+        //    .HasIndex(x => new { x.Title, x.Url })
+        //    .IsDescending(true, false);//<-- EF 7.0 new feature
     }
 
     public DbSet<Blog> Blogs { get; set; }
