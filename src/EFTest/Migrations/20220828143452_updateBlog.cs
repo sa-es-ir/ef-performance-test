@@ -20,11 +20,11 @@ namespace EFTest.Migrations
                 type: "nvarchar(450)",
                 nullable: true);
 
-            migrationBuilder.CreateIndex(
-                name: "IX_Blogs_Title_Url",
-                table: "Blogs",
-                columns: new[] { "Title", "Url" },
-                descending: new[] { true, false });
+            //migrationBuilder.CreateIndex(
+            //    name: "IX_Blogs_Title_Url",
+            //    table: "Blogs",
+            //    columns: new[] { "Title", "Url" },
+            //    descending: new[] { true, false });
         }
 
         /// <inheritdoc />
@@ -38,11 +38,11 @@ namespace EFTest.Migrations
                 name: "Url",
                 table: "Blogs");
 
-            migrationBuilder.CreateIndex(
-                name: "IX_Blogs_Title",
-                table: "Blogs",
-                column: "Title",
-                descending: new[] { true });
+            //migrationBuilder.CreateIndex(
+            //    name: "IX_Blogs_Title",
+            //    table: "Blogs",
+            //    column: "Title",
+            //    descending: new[] { true });
         }
     }
 }

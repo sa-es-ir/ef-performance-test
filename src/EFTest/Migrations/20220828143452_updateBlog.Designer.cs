@@ -77,8 +77,8 @@ namespace EFTest.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Title", "Url")
-                        .IsDescending(true, false);
+                    //b.HasIndex("Title", "Url")
+                    //    .IsDescending(true, false);
 
                     b.ToTable("Blogs");
                 });

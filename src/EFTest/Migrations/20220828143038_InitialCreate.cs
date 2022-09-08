@@ -43,11 +43,11 @@ namespace EFTest.Migrations
                     table.PrimaryKey("PK_Blogs", x => x.Id);
                 });
 
-            migrationBuilder.CreateIndex(
-                name: "IX_Blogs_Title",
-                table: "Blogs",
-                column: "Title",
-                descending: new[] { true });
+            //migrationBuilder.CreateIndex(
+            //    name: "IX_Blogs_Title",
+            //    table: "Blogs",
+            //    column: "Title",
+            //    descending: new[] { true });
         }
 
         /// <inheritdoc />

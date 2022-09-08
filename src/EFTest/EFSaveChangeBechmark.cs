@@ -10,7 +10,7 @@ namespace EFTest;
 [SimpleJob(RuntimeMoniker.Net70)]
 [SimpleJob(RuntimeMoniker.Net60)]
 [RPlotExporter]
-[MemoryDiagnoser()]
+[MemoryDiagnoser(false)]
 public class EFSaveChangeBechmark
 {
     [Params(20000)]

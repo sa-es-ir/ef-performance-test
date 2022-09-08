@@ -6,9 +6,15 @@ using Domain;
 using Domain.Models;
 using EFTest;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 
-Console.WriteLine(BenchmarkRunner.Run<LinqAggregateBenchmark>());
+var list = new List<int>() { 1, 2, 3, 4, 5, 56 };
+
+var query = list.Where(x => x > 4).AsQueryable().Expression.CreateEFPropertyExpression();
+
+
+//Console.WriteLine(BenchmarkRunner.Run<EFBulkBenchmark>());
 return;
 
 Console.WriteLine("Hello, World!");
