@@ -13,7 +13,7 @@ public class ApplicationDbContextBuilder : IDesignTimeDbContextFactory<Applicati
     {
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
         optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=TestEF;Integrated Security=true;MultipleActiveResultSets=true", b => b.MigrationsAssembly("EFTest"));
-        //return new ApplicationDbContext(optionsBuilder.Options);
-        return new ApplicationDbContext();
+        return new ApplicationDbContext(optionsBuilder.Options);
+        //return new ApplicationDbContext();
     }
 }

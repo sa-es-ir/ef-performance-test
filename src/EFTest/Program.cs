@@ -9,8 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 
-
-//Console.WriteLine(BenchmarkRunner.Run<EFBulkBenchmark>());
+Console.WriteLine(BenchmarkRunner.Run<AllEFFunctionBenchmark>());
 return;
 
 Console.WriteLine("Hello, World!");

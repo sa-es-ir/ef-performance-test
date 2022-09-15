@@ -20,8 +20,8 @@ public class LinqOrderByBenchmark
     [Benchmark]
     public void OrderBy_Net6() => _source.ToArray();
 
-    [Benchmark]
-    public void OrderBy_Net7() => _source.Order();
+    //[Benchmark]
+    //public void OrderBy_Net7() => _source.Order();
 
     [Benchmark]
     public void OrderByDescending_Net6() => _source.ToList().Average();
