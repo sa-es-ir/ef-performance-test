@@ -10,6 +10,7 @@ public class Blog : ModelBase
 
     public string Url { get; set; }
 
-    [Timestamp]
-    public byte[] RowVersion { get; set; }
+    public long AuthorId { get; set; }
+
+    public Author Author { get; set; }
 }

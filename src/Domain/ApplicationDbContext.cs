@@ -5,10 +5,15 @@ namespace Domain;
 
 public class ApplicationDbContext : DbContext
 {
-    //public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
-    //{
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+    {
 
-    //}
+    }
+
+    public ApplicationDbContext()
+    {
+
+    }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -18,9 +23,10 @@ public class ApplicationDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        //modelBuilder.Entity<Blog>()
-        //    .HasIndex(x => new { x.Title, x.Url })
-        //    .IsDescending(true, false);//<-- EF 7.0 new feature
+        modelBuilder.Entity<Blog>()
+            .HasOne(x => x.Author)
+            .WithMany();
+        //.IsDescending(true, false);//<-- EF 7.0 new feature
     }
 
     public DbSet<Blog> Blogs { get; set; }
